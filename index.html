@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Policy Tracker for Journals in Rhetoric, Writing Studies, and TPC</title>
+  <meta name="description" content="Links to the generative AI policies of journals in rhetoric, writing studies, and technical-professional communication.">
+  <!-- Citation metadata, read by Zotero, Mendeley, Google Scholar and similar tools -->
+  <meta name="citation_title" content="AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication">
+  <meta name="citation_author" content="Gupta, Anuj">
+  <meta name="citation_author" content="Miller-Cochran, Susan">
+  <meta name="citation_author" content="Anson, Chris">
+  <meta name="citation_publication_date" content="2026/10/16">
+  <meta name="citation_publisher" content="Zenodo">
+  <meta name="citation_public_url" content="https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/">
+  <meta name="citation_language" content="en">
+  <!-- After the first Zenodo release, add this line with your concept DOI:
+  <meta name="citation_doi" content="10.5281/zenodo.XXXXXXX"> -->
+
+  <meta name="DC.title" content="AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication">
+  <meta name="DC.creator" content="Gupta, Anuj">
+  <meta name="DC.creator" content="Miller-Cochran, Susan">
+  <meta name="DC.creator" content="Anson, Chris">
+  <meta name="DC.date" content="2026-10-16">
+  <meta name="DC.type" content="Dataset">
+  <meta name="DC.publisher" content="Zenodo">
+  <meta name="DC.rights" content="CC BY 4.0">
+  <meta name="DC.language" content="en">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication",
+    "description": "Links to the generative AI policies that govern journals in rhetoric, writing studies, and technical-professional communication, including journal-specific policies, publisher-wide policies, and guidance from organizations such as COPE and ICMJE. Working prototype; only journals with a located policy are included.",
+    "url": "https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/",
+    "version": "0.1.0",
+    "datePublished": "2026-10-16",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "keywords": ["generative AI", "publication ethics", "rhetoric", "writing studies", "technical and professional communication", "journal policies"],
+    "creator": [
+      { "@type": "Person", "givenName": "Anuj", "familyName": "Gupta", "name": "Anuj Gupta" },
+      { "@type": "Person", "givenName": "Susan", "familyName": "Miller-Cochran", "name": "Susan Miller-Cochran" },
+      { "@type": "Person", "givenName": "Chris", "familyName": "Anson", "name": "Chris Anson" }
+    ],
+    "distribution": [{
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/data/database.csv"
+    }]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication</h1>
+    <p class="lede">
+      Links to the generative AI policies that govern journals in our fields, whether set by the journal
+      itself, by its publisher, or by organizations such as COPE. Where a journal is covered by several
+      linked policies, all of them are listed.
+    </p>
+
+    <aside class="notice" role="note">
+      <strong>Working prototype.</strong> Please excuse any errors. We are adding more content in the coming days.
+      If you spot a mistake, a broken link, or a journal policy we've missed, please let us know.
+      <a class="button report" href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Report an issue or suggest a journal</a>
+    </aside>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search journals or publishers…" aria-label="Search">
+      <span id="count" aria-live="polite">Loading…</span>
+      <a class="button" href="data/database.csv" download>Download CSV</a>
+    </div>
+    <p class="small muted">
+      Not seeing a journal from our fields? That means only that we could not locate a generative AI policy
+      on its website. <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Let us know</a> if we've missed one.
+    </p>
+
+    <div class="table-wrap">
+      <table id="table">
+        <thead><tr><th>Journal</th><th>AI policy</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About this tracker</h2>
+
+      <h3>The larger project</h3>
+      <p>
+        This tracker is part of a longer project analyzing emerging trends in how our fields are responding
+        to generative AI, particularly in terms of changing scholarly norms. We will release our analysis of
+        these journals in the coming months.
+      </p>
+
+      <h3 id="missing">What's included, and what's missing</h3>
+      <p>
+        The tracker lists only journals for which we located a generative AI policy. If a journal from our
+        fields is not listed, that is only because we could not find such a policy on the journal's website.
+        If you know of a journal with a policy we have missed, or you see a broken or incorrect link, please
+        <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">use our reporting form</a>. For anything else,
+        you can email Anuj Gupta at <a class="email" href="#" data-u="anujguptaresearch7" data-d="gmail.com">anujguptaresearch7 [at] gmail [dot] com</a>.
+      </p>
+
+      <h3>How the data was collected</h3>
+      <p>
+        <strong>Building the journal list.</strong> We started with the list of journals in rhetoric, composition
+        and writing studies, and technical and professional communication published by Doug Hesse (2019), and added
+        to it based on our knowledge of journals in the field. The project also took inspiration from Chris Anson's
+        presentation at the Eleventh International Writing Analytics Conference (2025).
+      </p>
+      <p>
+        <strong>First round (January 2026).</strong> Anuj Gupta and Susan Miller-Cochran checked each journal's
+        website for a generative AI policy, using search engines to locate journal, publisher and organizational
+        policies.
+      </p>
+      <p>
+        <strong>Update (October 2026).</strong> We used the web search and browsing tools of Claude, an AI model
+        made by Anthropic, to check whether any journals had published a policy since January, re-checking each journal for
+        which we had not found one. Following Anthropic's guidelines, Claude respected each website's robots.txt rules,
+        and we additionally instructed it to keep its requests to a minimum so as not to burden any website's
+        servers. We manually verified every result Claude found by checking the policy ourselves.
+      </p>
+      <p>The website was designed by Anuj Gupta with assistance from Claude.</p>
+      <p class="small muted reference">
+        Hesse, D. (2019). Journals in composition studies, thirty-five years after. <em>College English, 81</em>(4), 367–396.
+      </p>
+
+      <h3>Using this data</h3>
+      <p>
+        The tracker is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>:
+        you are free to share and adapt it for any purpose, as long as you cite us. This license covers our
+        compilation only. For the policies themselves and how they apply to your work, follow the guidelines
+        set by the individual journals, their editors, and their publishers.
+      </p>
+
+      <h3 id="cite">How to cite</h3>
+      <div class="cite">
+        <p id="citation">
+          Gupta, A., Miller-Cochran, S., &amp; Anson, C. (2026). <em>AI policy tracker for journals in rhetoric,
+          writing studies, and technical-professional communication</em> (Version 0.1.0) [Data set]. Zenodo.
+          https://doi.org/10.5281/zenodo.XXXXXXX
+        </p>
+        <button id="copy-cite" type="button">Copy citation</button>
+      </div>
+      <p class="small muted">
+        The DOI above always points to the latest version. Each version also has its own DOI, listed on
+        <a href="https://doi.org/10.5281/zenodo.XXXXXXX">Zenodo</a>, for citing the exact version you used.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Data licensed CC BY 4.0 · Code licensed MIT ·
+    <a href="https://github.com/mettalrose/genai_policy_tracker_rcws_tpc">Source on GitHub</a> ·
+    <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Report an issue</a> ·
+    <a class="email" href="#" data-u="anujguptaresearch7" data-d="gmail.com" data-label="Contact">Contact</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
