@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication"
+authors:
+  - family-names: "Gupta"
+    given-names: "Anuj"
+  - family-names: "Miller-Cochran"
+    given-names: "Susan"
+  - family-names: "Anson"
+    given-names: "Chris"
+version: "0.1.0"
+date-released: "2026-10-16"
+license: CC-BY-4.0
+repository-code: "https://github.com/mettalrose/genai_policy_tracker_rcws_tpc"
+url: "https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/"
+abstract: >-
+  Links to the generative AI policies that govern journals in rhetoric, writing studies,
+  and technical-professional communication, including journal-specific policies,
+  publisher-wide policies, and guidance from organizations such as COPE and ICMJE.
+  Working prototype; only journals with a located policy are included.
+keywords:
+  - generative AI
+  - publication ethics
+  - rhetoric
+  - writing studies
+  - technical and professional communication
+  - journal policies
+# After your first Zenodo release, uncomment and paste the CONCEPT DOI (the "Cite all versions" one):
+# doi: "10.5281/zenodo.XXXXXXX"
