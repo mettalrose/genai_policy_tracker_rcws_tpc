@@ -1,0 +1,32 @@
+{
+  "title": "AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication",
+  "upload_type": "dataset",
+  "description": "<p>Links to the generative AI policies that govern journals in rhetoric, writing studies, and technical-professional communication, including journal-specific policies, publisher-wide policies, and guidance from organizations such as COPE and ICMJE. Where several linked policies apply to a journal, all are listed with a short description of how they relate.</p><p>This is a working prototype, and more content will be added. Only journals for which a generative AI policy could be located are included; a journal's absence means only that no policy was found on its website. </p><p>The tracker is part of a longer project analyzing emerging trends in these fields' responses to generative AI in terms of changing scholarly norms. The journal list began from Doug Hesse's list of journals in the field (Hesse, D. (2019). Journals in composition studies, thirty-five years after. College English, 81(4), 367–396), with additions based on the authors' knowledge of the field; the project also took inspiration from Chris Anson's presentation at the Eleventh International Writing Analytics Conference (2025). In January 2026, Anuj Gupta and Susan Miller-Cochran checked each journal's website for a generative AI policy using search engines. In October 2026, journals without a located policy were re-checked for newly published policies using Claude's (Anthropic) web search and browsing tools, respecting each website's robots.txt rules and keeping requests to a minimum; every result was manually verified by the authors.</p><p>This compilation is licensed CC BY 4.0. For the policies themselves, follow the guidelines of the individual journals, editors and publishers. To report corrections or suggest additions, see the contact details on the tracker's website.</p><p>Searchable version: https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/</p>",
+  "creators": [
+    {
+      "name": "Gupta, Anuj"
+    },
+    {
+      "name": "Miller-Cochran, Susan"
+    },
+    {
+      "name": "Anson, Chris"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "generative AI",
+    "publication ethics",
+    "rhetoric",
+    "writing studies",
+    "technical and professional communication",
+    "journal policies"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ]
+}
