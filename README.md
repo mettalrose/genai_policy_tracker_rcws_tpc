@@ -58,7 +58,7 @@ edited by hand. The website was designed by Anuj Gupta with assistance from Clau
 ## How to cite
 
 Gupta, A., Miller-Cochran, S., & Anson, C. (2026). *AI policy tracker for journals in rhetoric,
-writing studies, and technical-professional communication* (Version 0.1.0) [Data set]. Zenodo.
+composition, writing studies, and technical and professional communication* (Version 0.1.0) [Data set]. Zenodo.
 https://doi.org/10.5281/zenodo.XXXXXXX
 
 GitHub's "Cite this repository" button gives the same citation in other formats. The DOI
