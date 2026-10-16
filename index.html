@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Policy Tracker for Journals in Rhetoric, Writing Studies, and TPC</title>
+  <meta name="description" content="Links to the generative AI policies of journals in rhetoric, writing studies, and technical-professional communication.">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Policy Tracker for Journals in Rhetoric, Writing Studies, and Technical-Professional Communication</h1>
+    <p class="lede">
+      Links to the generative AI policies that govern journals in our fields, whether set by the journal
+      itself, by its publisher, or by organizations such as COPE. Where a journal is covered by several
+      linked policies, all of them are listed.
+    </p>
+
+    <aside class="notice" role="note">
+      <strong>Working prototype.</strong> Please excuse any errors. We are adding more content in the coming days.
+      If you spot a mistake, a broken link, or a journal policy we've missed, please email Anuj Gupta at
+      <a href="mailto:anujguptaresearch7@gmail.com">anujguptaresearch7@gmail.com</a>.
+    </aside>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search journals or publishers…" aria-label="Search">
+      <span id="count" aria-live="polite">Loading…</span>
+      <a class="button" href="data/database.csv" download>Download CSV</a>
+    </div>
+    <p class="small muted">
+      Not seeing a journal from our fields? That means only that we could not locate a generative AI policy
+      on its website. <a href="#missing">Let us know</a> if we've missed one.
+    </p>
+
+    <div class="table-wrap">
+      <table id="table">
+        <thead><tr><th>Journal</th><th>AI policy</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h">About this tracker</h2>
+
+      <h3>The larger project</h3>
+      <p>
+        This tracker is part of a longer project analyzing emerging trends in how our fields are responding
+        to generative AI, particularly in terms of changing scholarly norms. We will release our analysis of
+        these journals in the coming months.
+      </p>
+
+      <h3 id="missing">What's included, and what's missing</h3>
+      <p>
+        The tracker lists only journals for which we located a generative AI policy. If a journal from our
+        fields is not listed, that is only because we could not find such a policy on the journal's website.
+        If you know of a journal with a policy we have missed, or you see a broken or incorrect link, please
+        email Anuj Gupta at <a href="mailto:anujguptaresearch7@gmail.com">anujguptaresearch7@gmail.com</a>.
+      </p>
+
+      <h3>How the data was collected</h3>
+      <p>
+        The data was collected by Anuj Gupta and Susan Miller-Cochran over several months, taking inspiration
+        from a similar data collection project that Chris Anson began a few years ago. Policy links were last
+        checked in January 2026. The website was designed by Anuj Gupta with assistance from Claude.
+      </p>
+
+      <h3>Using this data</h3>
+      <p>
+        The tracker is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>:
+        you are free to share and adapt it for any purpose, as long as you cite us. This license covers our
+        compilation only. For the policies themselves and how they apply to your work, follow the guidelines
+        set by the individual journals, their editors, and their publishers.
+      </p>
+
+      <h3 id="cite">How to cite</h3>
+      <div class="cite">
+        <p id="citation">
+          Gupta, A., Miller-Cochran, S., &amp; Anson, C. (2026). <em>AI policy tracker for journals in rhetoric,
+          writing studies, and technical-professional communication</em> (Version 0.1.0) [Data set]. Zenodo.
+          https://doi.org/10.5281/zenodo.XXXXXXX
+        </p>
+        <button id="copy-cite" type="button">Copy citation</button>
+      </div>
+      <p class="small muted">
+        The DOI above always points to the latest version. Each version also has its own DOI, listed on
+        <a href="https://doi.org/10.5281/zenodo.XXXXXXX">Zenodo</a>, for citing the exact version you used.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Data licensed CC BY 4.0 · Code licensed MIT ·
+    <a href="https://github.com/mettalrose/genai_policy_tracker_rcws_tpc">Source on GitHub</a> ·
+    <a href="mailto:anujguptaresearch7@gmail.com">Contact</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
