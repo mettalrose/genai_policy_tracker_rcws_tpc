@@ -2,10 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
-Links to the generative AI policies that govern journals in our fields, whether set by the
-journal itself, by its publisher, or by organizations such as COPE. Where several linked
-policies apply to a journal, all are listed.
-
+RCWS (Rhetoric, Composition, Writing Studies) and TPC (Technical and Professional Communication) are interdisciplinary academic fields that study writing across domains. This database curates links to emerging generative AI policies that govern journals in these fields.
+  
 
 **Browse online:** https://mettalrose.github.io/genai_policy_tracker_rcws_tpc/
 **Download:** [`data/database.csv`](data/database.csv)
