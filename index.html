@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>AI Policy Tracker for Journals in RCWS and TPC</title>
-  <meta name="description" content=""RCWS (Rhetoric, Composition, Writing Studies) and TPC (Technical and Professional Communication) are interdisciplinary academic fields that study writing across domains. This database curates links to the generative AI policies that govern journals in these fields, including journal-specific policies, publisher-wide policies, and guidance from organizations such as COPE and ICMJE.",.">
+  <meta name="description" content="Links to the generative AI policies that govern journals in rhetoric, composition and writing studies (RCWS) and technical and professional communication (TPC).">
   <!-- Citation metadata, read by Zotero, Mendeley, Google Scholar and similar tools -->
   <meta name="citation_title" content="AI Policy Tracker for Journals in RCWS and TPC">
   <meta name="citation_author" content="Gupta, Anuj">
@@ -57,9 +59,10 @@
   <script src="vendor/papaparse.min.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#journals">Skip to the list of journals</a>
   <header>
     <h1>AI Policy Tracker for Journals in RCWS and TPC</h1>
-      <ul class="byline" aria-label="Authors">
+    <ul class="byline" aria-label="Authors">
       <li><span class="name">Anuj Gupta</span><span class="affil">University of South Florida</span></li>
       <li><span class="name">Susan Miller-Cochran</span><span class="affil">University of Arizona</span></li>
       <li><span class="name">Chris Anson</span><span class="affil">North Carolina State University</span></li>
@@ -71,7 +74,7 @@
     <aside class="notice" role="note">
       <strong>Working prototype.</strong> Please excuse any errors. We are adding more content in the coming days.
       If you spot a mistake, a broken link, or a journal policy we've missed, or if you have any other feedback, please let us know.
-      <a class="button report" href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Report an issue or suggest a journal</a>
+      <a class="button report" href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener noreferrer">Report an issue or suggest a journal<span class="visually-hidden"> (opens in new tab)</span></a>
     </aside>
   </header>
 
@@ -83,13 +86,15 @@
     </div>
     <p class="small muted">
       Not seeing a journal from our fields? That means only that we could not locate a generative AI policy
-      on its website. <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Let us know</a> if we've missed one.
+      on its website. <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener noreferrer">Let us know<span class="visually-hidden"> (opens in new tab)</span></a> if we've missed one.
     </p>
 
-    <div class="table-wrap">
-      <table id="table">
-        <thead><tr><th>Journal</th><th>AI policy</th></tr></thead>
-        <tbody></tbody>
+    <noscript><p>The searchable list needs JavaScript. You can still <a href="data/database.csv">download the data as a CSV file</a>.</p></noscript>
+    <div class="table-wrap" id="journals" tabindex="-1">
+      <table id="table" role="table">
+        <caption class="visually-hidden">Journals and links to their generative AI policies</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">Journal</th><th role="columnheader" scope="col">AI policy</th></tr></thead>
+        <tbody role="rowgroup"></tbody>
       </table>
     </div>
 
@@ -108,7 +113,7 @@
         The tracker lists only journals for which we located a generative AI policy. If a journal from our
         fields is not listed, that is only because we could not find such a policy on the journal's website.
         If you know of a journal with a policy we have missed, or you see a broken or incorrect link, please
-        <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">use our reporting form</a>. For anything else,
+        <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener noreferrer">use our reporting form<span class="visually-hidden"> (opens in new tab)</span></a>. For anything else,
         you can email Anuj Gupta at <a class="email" href="#" data-u="anujguptaresearch7" data-d="gmail.com">anujguptaresearch7 [at] gmail [dot] com</a>.
       </p>
 
@@ -117,7 +122,7 @@
         <strong>Building the journal list.</strong> We started with the list of journals in rhetoric, composition
         and writing studies, and technical and professional communication published by Doug Hesse (2019), and added
         to it based on our knowledge of journals in the field. The project also took inspiration from Chris Anson's
-        presentation at the Eleventh International Writing Analytics Conference (2025). No list of journals in a field can probably ever be exhaustive, since what counts as a field and what counts as a journal within it are subjective to a degree. This is why we welcome your input if you'd like to add suggest other additions to our list. 
+        presentation at the Eleventh International Writing Analytics Conference (2025). No list of journals in a field can probably ever be exhaustive, since what counts as a field and what counts as a journal within it are subjective to a degree. This is why we welcome your suggestions for other journals to add to our list.
       </p>
       <p>
         <strong>First round (January 2026).</strong> Anuj Gupta and Susan Miller-Cochran checked each journal's
@@ -127,12 +132,12 @@
       <p>
         <strong>Update (October 2026).</strong> We used the web search and browsing tools of Claude Opus 5.5, a Gen AI model
         made by Anthropic, to check whether any journals had published a policy since January, re-checking each journal for
-        which we had not found one. Following Anthropic's guidelines, Claude respected each website's robots.txt rules,
-        and we additionally instructed it to keep its requests to a minimum so as not to burden any website's
-        servers. We manually verified every result Claude found by checking the policy ourselves.
+        which we had not found one. We instructed Claude to respect each website's robots.txt rules and any other
+        restrictions on automated access, and to keep its requests to a minimum so as not to burden any
+        website's servers. We manually verified every result Claude found by checking the policy ourselves.
       </p>
       <p>The website was designed by Anuj Gupta with assistance from Claude.</p>
-      <p class="reference">
+      <p class="small muted reference">
         Hesse, D. (2019). Journals in composition studies, thirty-five years after. <em>College English, 81</em>(4), 367–396.
       </p>
 
@@ -144,14 +149,23 @@
         set by the individual journals, their editors, and their publishers.
       </p>
 
+      <h3>Privacy</h3>
+      <p>
+        This site does not use cookies, analytics or any other tracking. It is hosted on GitHub Pages, which
+        may log visitors' IP addresses for security purposes, as described in
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.
+        The reporting form runs on Google Forms. What you submit through it is seen only by the project team and
+        used only to maintain this tracker; all personal details on the form are optional.
+      </p>
+
       <h3 id="cite">How to cite</h3>
       <div class="cite">
         <p id="citation">
-          Gupta, A., Miller-Cochran, S., &amp; Anson, C. (2026). <em>AI policy tracker for journals in rhetoric,
-          composition, writing studies, and technical and professional communication</em> (Version 0.1.0) [Data set]. Zenodo.
+          Gupta, A., Miller-Cochran, S., &amp; Anson, C. (2026). <em>AI policy tracker for journals in RCWS and TPC</em> (Version 0.1.0) [Data set]. Zenodo.
           https://doi.org/10.5281/zenodo.XXXXXXX
         </p>
         <button id="copy-cite" type="button">Copy citation</button>
+        <span id="copy-status" class="visually-hidden" role="status" aria-live="polite"></span>
       </div>
       <p class="small muted">
         The DOI above always points to the latest version. Each version also has its own DOI, listed on
@@ -163,7 +177,7 @@
   <footer>
     Data licensed CC BY 4.0 · Code licensed MIT ·
     <a href="https://github.com/mettalrose/genai_policy_tracker_rcws_tpc">Source on GitHub</a> ·
-    <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener">Report an issue</a> ·
+    <a href="https://forms.gle/kW1J3E3cJa9d1kUk6" target="_blank" rel="noopener noreferrer">Report an issue<span class="visually-hidden"> (opens in new tab)</span></a> ·
     <a class="email" href="#" data-u="anujguptaresearch7" data-d="gmail.com" data-label="Contact">Contact</a>
   </footer>
 
