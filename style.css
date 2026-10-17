@@ -20,12 +20,6 @@ a { color: var(--accent); }
 .lede { color: var(--muted); max-width: 70ch; }
 .small { font-size: .875rem; }
 .muted { color: var(--muted); }
-/* Author byline under the title */
-.byline { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 18px; padding: 0; list-style: none; }
-.byline li { background: var(--row); border-left: 3px solid var(--accent); border-radius: 4px;
-             padding: 8px 14px; line-height: 1.35; }
-.byline .name { display: block; font-weight: 600; }
-.byline .affil { display: block; font-size: .85rem; color: var(--muted); }
 
 .notice .report { display: block; width: fit-content; margin-top: 10px; font-size: .9rem; }
 .notice { margin: 16px 0 0; padding: 12px 14px; max-width: 75ch; font-size: .925rem;
@@ -64,3 +58,18 @@ footer { color: var(--muted); font-size: .85rem; padding: 40px 16px; }
   tr, td { display: block; }
   td.journal { border-bottom: 0; padding-bottom: 0; }
 }
+
+/* Accessibility helpers */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: 16px; top: -48px; padding: 8px 12px; z-index: 10;
+  background: var(--accent); color: var(--bg); border-radius: 4px; font-weight: 600; text-decoration: none; }
+.skip-link:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Author byline under the title */
+.byline { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 18px; padding: 0; list-style: none; }
+.byline li { background: var(--row); border-left: 3px solid var(--accent); border-radius: 4px;
+             padding: 8px 14px; line-height: 1.35; }
+.byline .name { display: block; font-weight: 600; }
+.byline .affil { display: block; font-size: .85rem; color: var(--muted); }
