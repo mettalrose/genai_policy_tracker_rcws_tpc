@@ -5,6 +5,11 @@ const CSV_PATH = "data/database.csv";
 const SEP = " | ";
 
 let rows = [];
+
+function isWebUrl(u) {
+  try { return ["https:", "http:"].includes(new URL(u.trim()).protocol); }
+  catch { return false; }
+}
 const $ = (id) => document.getElementById(id);
 
 Papa.parse(CSV_PATH, {
@@ -18,7 +23,9 @@ Papa.parse(CSV_PATH, {
       return {
         journal: r.journal || "",
         description: r.description || "",
-        links: urls.filter(Boolean).map((u, i) => ({ url: u, name: names[i] || u })),
+        // Only ever link to http(s) addresses, whatever ends up in the CSV.
+        links: urls.map((u, i) => ({ url: u.trim(), name: names[i] || u }))
+                   .filter((l) => isWebUrl(l.url)),
       };
     }).sort((a, b) => a.journal.localeCompare(b.journal));
     render();
@@ -35,12 +42,15 @@ function render() {
 
   $("table").tBodies[0].replaceChildren(...shown.map((r) => {
     const tr = document.createElement("tr");
+    tr.setAttribute("role", "row");
 
     const tdJ = document.createElement("td");
     tdJ.className = "journal";
+    tdJ.setAttribute("role", "cell");
     tdJ.textContent = r.journal;
 
     const tdP = document.createElement("td");
+    tdP.setAttribute("role", "cell");
     const ul = document.createElement("ul");
     r.links.forEach((l) => {
       const li = document.createElement("li");
@@ -48,7 +58,11 @@ function render() {
       a.href = l.url;
       a.textContent = l.name;
       a.target = "_blank";
-      a.rel = "noopener";
+      a.rel = "noopener noreferrer";
+      const hint = document.createElement("span");
+      hint.className = "visually-hidden";
+      hint.textContent = " (opens in new tab)";
+      a.appendChild(hint);
       li.appendChild(a);
       ul.appendChild(li);
     });
@@ -76,8 +90,10 @@ $("copy-cite").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(text);
     $("copy-cite").textContent = "Copied";
+    $("copy-status").textContent = "Citation copied to clipboard";
   } catch {
     $("copy-cite").textContent = "Select the text above to copy";
+    $("copy-status").textContent = "Copying failed. Select the citation text to copy it.";
   }
   setTimeout(() => { $("copy-cite").textContent = "Copy citation"; }, 2000);
 });
