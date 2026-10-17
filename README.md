@@ -26,11 +26,11 @@ Policies were first collected in January 2026 and updated in October 2026 (see "
 | `journal` | Journal name |
 | `policies` | Name of each policy that applies, separated by ` \| ` |
 | `policy_links` | URL of each policy, in the same order as `policies`, separated by ` \| ` |
-| `description` | For journals covered by more than one policy, how the policies relate |
+| `description` | For journals covered by more than one policy, here we describe how the policies relate to each other |
 
 ## About the project
 
-This tracker is part of a longer project analyzing emerging trends in how our fields are
+This tracker is part of a larger project analyzing emerging trends in how our fields are
 responding to generative AI, particularly in terms of changing scholarly norms. We will
 release our analysis of these journals in the coming months.
 
