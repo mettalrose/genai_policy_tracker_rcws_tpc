@@ -68,8 +68,7 @@ footer { color: var(--muted); font-size: .85rem; padding: 40px 16px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* Author byline under the title */
-.byline { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 18px; padding: 0; list-style: none; }
-.byline li { background: var(--row); border-left: 3px solid var(--accent); border-radius: 4px;
-             padding: 8px 14px; line-height: 1.35; }
-.byline .name { display: block; font-weight: 600; }
+.byline { display: flex; flex-wrap: wrap; gap: 8px 36px; margin: 14px 0 20px; padding: 0; list-style: none; }
+.byline li { line-height: 1.35; }
+.byline .name { display: block; font-size: 1rem; font-weight: 500; }
 .byline .affil { display: block; font-size: .85rem; color: var(--muted); }
