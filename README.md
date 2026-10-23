@@ -1,6 +1,6 @@
 # AI Policy Tracker for Journals in RCWS and TPC
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://doi.org/10.5281/zenodo.23604520)](https://doi.org/10.5281/zenodo.23604520)
 
 RCWS (Rhetoric, Composition, & Writing Studies) and TPC (Technical & Professional Communication) are interdisciplinary academic fields that study writing across domains. Over the last few years, journals in these fields have started to develop policies regarding the use of Generative AI tools. Our database curates links to these policies that govern scholarship in our field. 
 
