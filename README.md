@@ -51,7 +51,7 @@ We started with the list of journals in RCWS and TPC published by Doug Hesse (20
 
 ## How to cite
 
-Gupta, A., Miller-Cochran, S., & Anson, C. (2026). *AI policy tracker for journals in RCWS and TPC* (Version 0.1.0) [Data set]. Zenodo.
+Gupta, A., Miller-Cochran, S., & Anson, C. (2026). *AI policy tracker for journals in RCWS and TPC* (Version 1.0.0) [Data set]. Zenodo.
 https://doi.org/10.5281/zenodo.23604520
 
 GitHub's "Cite this repository" button gives the same citation in other formats. The DOI
